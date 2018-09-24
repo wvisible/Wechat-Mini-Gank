@@ -1,0 +1,19 @@
+<!--pages/search/search.wxml-->
+<view class="search"> 
+    <view class="search-input">
+        <icon class="search-icon" size="16" type='search'></icon>  
+        <input placeholder="请输入关键字" focus="true" bindinput="bindKeyInput"
+         confirm-type="search" bindconfirm="search"/>    
+    </view>
+    <view class="search-reminder">
+        <text class = "search-reminder-text">目前支持两种搜索方式:</text>
+        <text class = "search-reminder-text">1. 点击下面标签搜索对应类别</text>
+        <text class = "search-reminder-text">2. 输入关键字并且点击相应标签则进行对应类别下的搜索</text>
+    </view>
+    <view class="search-item" wx:for="{{array}}" data-index="{{index}}" data-keywords="{{item}}" bindtap="onItemClick">  
+        <text class="{{activeItemIndex === index ? 'search-item-text-checked' : 'search-item-text-normal'}}">{{item}}</text>     
+    </view>
+    <view wx:for="{{data}}">
+        <view class="search-data-item" href="{{item.src}}">{{index + 1}}. {{item.desc}}  {{item.who}}</view>
+    </view>
+</view>

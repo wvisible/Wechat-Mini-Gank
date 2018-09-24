@@ -1,0 +1,12 @@
+<!-- pages/today/today.wxml -->
+<view>
+    <view class="today-container" wx:for="{{data}}">
+        <view class="today-tag">{{item.tag}}</view>
+        <view class="today-single" wx:for="{{item.singleItems}}">
+            <view class="today-singleItem" href="{{item.src}}">{{index + 1}}. {{item.desc}}  {{item.who}}</view>
+            <view class="today-item-image" wx:for="{{item.images}}">
+                <image class="today-image" mode="aspectFill" src="{{item}}" />
+            </view>
+        </view>
+    </view>
+</view>

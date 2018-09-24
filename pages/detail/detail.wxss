@@ -1,0 +1,24 @@
+/* pages/detail/detail.wxss */
+.image{
+    width: 100%;
+    height: 400rpx;
+    background-color: #eeeeee;
+}
+.frame{
+    background-color: #ffffff;
+    border-radius: 10rpx;
+    box-shadow: 8rpx 2rpx 2rpx #cccccc;
+    margin: 16rpx;
+    padding: 32rpx;
+    position: relative;
+}
+.tag{
+    font-size: 32rpx;
+    font-weight: 900;
+    margin-bottom: 16rpx;
+}
+.singleItem{
+    font-size: 30rpx;
+    margin-bottom: 12rpx;
+    color: grey;
+}

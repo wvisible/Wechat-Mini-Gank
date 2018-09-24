@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/today/today",
+    "pages/homepage/homepage",
+    "pages/detail/detail",
+    "pages/search/search",
+    "pages/girl/girl"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00B89F",
+    "navigationBarTitleText": "干货集中营",
+    "navigationBarTextStyle": "while"
+  },
+  "tabBar": {
+    "color": "#424242",
+    "selectedColor":"#00B89F",
+    "backgroundColor":"#fff",
+    "list": [{
+      "pagePath": "pages/today/today",
+      "text": "今日推荐",
+      "iconPath": "images/today_normal.png",
+      "selectedIconPath": "images/today_selected.png"     
+    },
+    {
+      "pagePath": "pages/homepage/homepage",
+      "text": "历史干货",
+      "iconPath": "images/history_normal.png",
+      "selectedIconPath": "images/history_selected.png"
+    },
+    {
+      "pagePath": "pages/search/search",
+      "text": "搜索",
+      "iconPath": "images/search_normal.png",
+      "selectedIconPath": "images/search_selected.png"
+    },
+    {
+      "pagePath": "pages/girl/girl",
+      "text": "妹子图",
+      "iconPath": "images/girl_normal.png",
+      "selectedIconPath": "images/girl_selected.png"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

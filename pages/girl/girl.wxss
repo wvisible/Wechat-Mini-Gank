@@ -1,0 +1,14 @@
+.girl-gallery {
+    /*定义列数*/
+    column-count: 2;
+    /*列间距*/
+    column-gap: 16rpx;
+    margin: 12rpx;
+}
+
+/*图片本身*/
+.girl-item image {
+  width: 100%;
+  border-radius: 10rpx;
+  box-shadow: 8rpx 2rpx 2rpx #cccccc;
+}

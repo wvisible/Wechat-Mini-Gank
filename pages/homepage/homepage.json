@@ -1,0 +1,5 @@
+{
+    "navigationBarTitleText":"历史干货",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": true
+}

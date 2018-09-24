@@ -1,0 +1,13 @@
+<!--pages/detail/detail.wxml-->
+<view class="index">
+    <view>
+        <image class="image" mode="aspectFill" src="{{imagesrc}}"/>
+    </view> 
+    <view class="frame" wx:for="{{data}}">
+        <view class="tag">{{item.tag}}</view>
+        <view wx:for="{{item.singleItems}}">
+            <view class="singleItem" href="{{item.src}}">{{index + 1}}. {{item.title}}  {{item.who}}</view>
+        </view>
+    </view>
+</view>
+

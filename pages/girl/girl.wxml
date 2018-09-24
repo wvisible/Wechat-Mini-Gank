@@ -1,0 +1,8 @@
+<view class="girl-gallery">
+    <view class="girl-item" wx:for="{{images}}">
+        <image src="{{item}}" mode="widthFix" />
+    </view>
+ </view>
+
+
+
