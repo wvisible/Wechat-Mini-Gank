@@ -24,3 +24,6 @@
 2. 添加图片查看器 (todo)
 3. 视频播放，只支持视频源的文件
 4. webview打开相应的网页，微信限制，个人类型与海外类型的小程序暂不支持使用并且必须配置业务域名
+
+### License
+Wechat-Mini-Gank is licensed under the MIT license. See the LICENSE.txt file for more information.
