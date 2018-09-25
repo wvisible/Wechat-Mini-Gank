@@ -1,0 +1,18 @@
+<template name="detail-temp">
+    <view>
+        <view>
+            <image class="temp-top-image" mode="aspectFill" src="{{imagesrc}}"/>
+        </view> 
+        <view class="temp-container" wx:for="{{data}}">
+            <view class="temp-tag">{{item.tag}}</view>
+            <view class="temp-single" wx:for="{{item.singleItems}}">
+                <view class="temp-singleItem" href="{{item.src}}">{{index + 1}}. {{item.desc}}  {{item.who}}</view>
+                <view class="temp-item-image" wx:for="{{item.images}}">
+                    <image class="temp-image" mode="aspectFill" src="{{item}}" />
+                </view>
+            </view>
+        </view>
+    </view>
+</template>
+
+

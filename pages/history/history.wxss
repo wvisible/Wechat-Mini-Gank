@@ -1,9 +1,9 @@
 /* pages/homepage/homepage.wxss */
 .card{
-  border: 4rpx soild #ffffff;
-  border-radius: 10rpx;
   background-color: #ffffff;
-  box-shadow: 8rpx 2rpx 2rpx #cccccc;
+  border-radius: 10rpx;
+  border:2rpx solid #cccccc;
+  box-shadow: 4rpx 4rpx 6rpx #cccccc;
   margin: 24rpx;
   position: relative;
 }

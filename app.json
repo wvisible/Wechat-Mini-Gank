@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/today/today",
-    "pages/homepage/homepage",
+    "pages/history/history",
     "pages/detail/detail",
     "pages/search/search",
     "pages/girl/girl"
@@ -23,7 +23,7 @@
       "selectedIconPath": "images/today_selected.png"     
     },
     {
-      "pagePath": "pages/homepage/homepage",
+      "pagePath": "pages/history/history",
       "text": "历史干货",
       "iconPath": "images/history_normal.png",
       "selectedIconPath": "images/history_selected.png"

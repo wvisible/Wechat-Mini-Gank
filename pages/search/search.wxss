@@ -61,7 +61,8 @@ page {
     font-size: 30rpx;
     background-color: #ffffff;
     border-radius: 10rpx;
-    box-shadow: 8rpx 2rpx 2rpx #cccccc;
+    border:2rpx solid #cccccc;
+    box-shadow: 4rpx 4rpx 6rpx #cccccc;
     color: #272323;
     padding: 24rpx;
 }

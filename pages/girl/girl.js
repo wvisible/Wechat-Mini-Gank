@@ -20,6 +20,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
+    girlArray.length = 0
     pageIndex = 1
     requestData()
   },
@@ -38,16 +39,15 @@ var that
 var Network = require("../../utils/network.js")
 var Constant = require("../../utils/constant.js")
 var pageIndex = 1
+var girlArray = []
 
 function requestData(){
-  console.log(pageIndex)
   Network.requestLoading(Constant.BASE_URL.concat("/data/福利/" + (pageIndex * 20) + "/1"), function(res){ 
-    var array = []
     for (let i = (pageIndex - 1) * 20; i < res.results.length; i++) {
-      array.push(res.results[i].url)
+      girlArray.push(res.results[i].url)
     }
     that.setData({
-      images: array
+      images: girlArray
     })
   }, function () {
     wx.showToast({

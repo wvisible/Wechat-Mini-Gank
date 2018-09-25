@@ -36,16 +36,10 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": -1,
 			"list": [
 				{
 					"id": 0,
-					"name": "homepage",
-					"pathName": "pages/homepage/homepage",
-					"query": ""
-				},
-				{
-					"id": 1,
 					"name": "today",
 					"pathName": "pages/today/today",
 					"query": ""

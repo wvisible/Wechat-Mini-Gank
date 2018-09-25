@@ -20,6 +20,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
+    historyArray.length = 0
     pageIndex = 1
     requestData()
   },
@@ -39,11 +40,9 @@ Page({
   }
 })
 
-var mTitles = []
-var mSrcs = []
-var mTimes = []
 var pageIndex = 1
 var that
+var historyArray = []
 
 var Network = require("../../utils/network.js")
 var Constant = require("../../utils/constant.js")
@@ -51,27 +50,18 @@ var Constant = require("../../utils/constant.js")
 
 function requestData() {
   Network.requestLoading(Constant.BASE_URL.concat("/history/content/" + (pageIndex * 10) + "/1"), function (res) {
-    for (let i = 0; i < res.results.length; i++){
-      bindData(res.results[i])
-    }
-    var itemList = []
-    for (let i = (pageIndex - 1) * 10; i < mTitles.length; i++){
-      itemList.push({ title: mTitles[i], src: mSrcs[i], time: mTimes[i] })
+    for (let i = (pageIndex - 1) * 10; i < res.results.length; i++){
+      var itemData = res.results[i]
+      var reg = new RegExp("[a-zA-z]+://[^\"]*")
+      var src = itemData.content.split("src=")[1].match(reg)[0]
+      historyArray.push({ title: itemData.title, src: src, time: itemData.publishedAt.split("T")[0] })
     }
     that.setData({
-      items: itemList
+      items: historyArray
     })
   }, function () {
     wx.showToast({
       title: '加载数据失败',
      })
   })
-}
-
-function bindData(itemData){
-  var re = new RegExp("[a-zA-z]+://[^\"]*")
-  var title = itemData.content.split("src=")[1].match(re)[0]
-  mTitles.push(itemData.title)
-  mTimes.push(itemData.publishedAt.split("T")[0])
-  mSrcs.push(title)
 }
