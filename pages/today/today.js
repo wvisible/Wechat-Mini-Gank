@@ -17,10 +17,11 @@ Page({
   },
 
   previewImage: function (e){  		
-    var current= e.currentTarget.dataset.src
+    var current= e.target.dataset.src
+    var urls = e.currentTarget.dataset.urls
     wx.previewImage({
       current: current, 	  	
-      urls: todayUrls 		
+      urls: urls 		
     })
   },
 
@@ -30,4 +31,3 @@ Page({
 })
 
 var Detail = require("../../utils/requestDetail.js")
-var todayUrls = []
