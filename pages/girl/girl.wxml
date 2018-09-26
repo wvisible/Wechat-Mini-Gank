@@ -1,6 +1,6 @@
 <view class="girl-gallery">
     <view class="girl-item" wx:for="{{images}}">
-        <image src="{{item}}" mode="widthFix" />
+        <image src="{{item}}" mode="widthFix" data-src="{{item}}" bindtap="previewImage"/>
     </view>
  </view>
 

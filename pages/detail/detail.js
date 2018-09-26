@@ -16,9 +16,24 @@ Page({
     var timeArray = options.time.split("-")
     Detail.requestDetailData(that, "/day/" + timeArray[0] + "/" + timeArray[1] + "/" + timeArray[2])
   },
+
+  previewImage: function (e){  		
+    var current= e.currentTarget.dataset.src
+    wx.previewImage({
+      current: current, 	  	
+      urls: detailUrls 		
+    })
+  },
+
+  handleImages: function (e){
+    detailUrls = e.currentTarget.dataset.urls
+  }
 })
 
 var Detail = require("../../utils/requestDetail.js")
+var detailUrls = []
+
+
 
 
 

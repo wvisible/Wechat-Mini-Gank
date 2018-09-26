@@ -15,6 +15,19 @@ Page({
     var that = this
     Detail.requestDetailData(that, "/today")
   },
+
+  previewImage: function (e){  		
+    var current= e.currentTarget.dataset.src
+    wx.previewImage({
+      current: current, 	  	
+      urls: todayUrls 		
+    })
+  },
+
+  handleImages: function (e){
+    todayUrls = e.currentTarget.dataset.urls
+  }
 })
 
 var Detail = require("../../utils/requestDetail.js")
+var todayUrls = []

@@ -5,10 +5,10 @@
         </view> 
         <view class="temp-container" wx:for="{{data}}">
             <view class="temp-tag">{{item.tag}}</view>
-            <view class="temp-single" wx:for="{{item.singleItems}}">
+            <view class="temp-single" wx:for="{{item.singleItems}}" data-urls="{{item.images}}" capture-bind:touchstart="handleImages">
                 <view class="temp-singleItem" href="{{item.src}}">{{index + 1}}. {{item.desc}}  {{item.who}}</view>
-                <view class="temp-item-image" wx:for="{{item.images}}">
-                    <image class="temp-image" mode="aspectFill" src="{{item}}" />
+                <view class="temp-item-image" wx:for="{{item.images}}" >
+                    <image class="temp-image" mode="aspectFill" src="{{item}}" data-src="{{item}}" capture-bind:touchstart="previewImage"/>
                 </view>
             </view>
         </view>

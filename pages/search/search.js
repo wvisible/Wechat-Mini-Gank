@@ -41,7 +41,6 @@ var keywords = ""
 var category = ""
 
 function requestData(){
-  console.log(keywords + ":::" + category)
   var url = ""
   if(category === ""){
     wx.showToast({
@@ -52,7 +51,6 @@ function requestData(){
   } else {
     url = Constant.BASE_URL.concat("/search/query/" + keywords + "/category/" + category + "/count/20/page/1")
   }
-  console.log(url)
   Network.requestLoading(url, function(res){ 
     var array = []
     var results = res.results
