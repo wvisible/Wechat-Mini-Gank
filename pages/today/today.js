@@ -23,10 +23,6 @@ Page({
       current: current, 	  	
       urls: urls 		
     })
-  },
-
-  handleImages: function (e){
-    todayUrls = e.currentTarget.dataset.urls
   }
 })
 
