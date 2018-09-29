@@ -3,6 +3,11 @@
 
 ### GIF 展示
 ![](https://github.com/wvisible/Wechat-Mini-Gank/blob/master/gif/demonstrate.gif)
+
+### 扫码体验
+可以使用微信扫描小程序码体验  
+![](https://github.com/wvisible/Wechat-Mini-Gank/blob/master/gif/mini.png)
+
 ### 已完成页面
 - 今日推荐展示 gank 最新消息,图文并茂
 - 历史推荐展示 gank 10页数据，支持上拉加载和下拉刷新
