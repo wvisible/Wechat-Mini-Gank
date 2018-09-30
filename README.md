@@ -2,11 +2,11 @@
 使用 Gank 接口，包含今日推荐、历史记录、搜索以及妹子图的微信小程序
 
 ### GIF 展示
-![](https://github.com/wvisible/Wechat-Mini-Gank/blob/master/gif/demonstrate.gif)
+![](https://github.com/wvisible/Wechat-Mini-Gank/blob/master/screenshots/demonstrate.gif)
 
 ### 扫码体验
 可以使用微信扫描小程序码体验  
-![](https://github.com/wvisible/Wechat-Mini-Gank/blob/master/gif/mini.png)
+![](https://github.com/wvisible/Wechat-Mini-Gank/blob/master/screenshots/mini.png)
 
 ### 已完成页面
 - 今日推荐展示 gank 最新消息,图文并茂
