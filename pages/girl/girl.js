@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    hidden: true,
+    imgsrc: "../../images/autorenew.png"
   },
 
   /**
@@ -39,7 +40,11 @@ Page({
       current: current, 	  	
       urls: girlArray 		
     })
-  }  
+  },
+  
+  clickRetry: function(event){
+    requestData()
+  }
 })
 
 
@@ -55,11 +60,18 @@ function requestData(){
       girlArray.push(res.results[i].url)
     }
     that.setData({
-      images: girlArray
+      images: girlArray,
+      hidden: true
     })
   }, function () {
+    if(pageIndex !== 1){
+      pageIndex--
+    }
     wx.showToast({
       title: '加载数据失败'
+    })
+    that.setData({
+      hidden: false
     })
   })
 }

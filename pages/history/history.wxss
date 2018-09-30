@@ -1,4 +1,14 @@
 /* pages/homepage/homepage.wxss */
+.load-failure-image{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
 .card{
   background-color: #ffffff;
   border-radius: 10rpx;

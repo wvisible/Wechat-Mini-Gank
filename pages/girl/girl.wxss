@@ -1,3 +1,14 @@
+.load-failure-image{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .girl-gallery {
     /*定义列数*/
     column-count: 2;

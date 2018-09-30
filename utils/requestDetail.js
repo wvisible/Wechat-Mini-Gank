@@ -22,10 +22,16 @@ function requestDetailData(that, url){
     that.setData({
       item: {
         imagesrc: src,
-        data: array
+        data: array,
+        hidden: true
       }   
     })
   }, function () {
+    that.setData({
+      item: {
+        hidden: false
+      }  
+    })
     wx.showToast({
       title: '加载数据失败'
     })

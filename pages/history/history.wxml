@@ -1,4 +1,6 @@
 <view>
+  <image class="load-failure-image" mode="aspectFill" src="{{imgsrc}}" hidden="{{hidden}}" bindtap="clickRetry"/>
+  
   <view class="card" wx:for="{{items}}" wx:key="unique">
     <view data-publish-time="{{item.time}}" bindtap="onItemClick">
       <image class="image" mode="aspectFill" src="{{item.src}}" />

@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-   
+    hidden: true,
+    imgsrc: "../../images/autorenew.png"
   },
 
   /**
@@ -37,6 +38,10 @@ Page({
     wx.navigateTo({
       url: '../detail/detail?time=' + event.currentTarget.dataset.publishTime
     })
+  },
+
+  clickRetry: function(event){
+    requestData()
   }
 })
 
@@ -47,7 +52,6 @@ var historyArray = []
 var Network = require("../../utils/network.js")
 var Constant = require("../../utils/constant.js")
 
-
 function requestData() {
   Network.requestLoading(Constant.BASE_URL.concat("/history/content/" + (pageIndex * 10) + "/1"), function (res) {
     for (let i = (pageIndex - 1) * 10; i < res.results.length; i++){
@@ -57,11 +61,18 @@ function requestData() {
       historyArray.push({ title: itemData.title, src: src, time: itemData.publishedAt.split("T")[0] })
     }
     that.setData({
-      items: historyArray
+      items: historyArray,
+      hidden: true
     })
   }, function () {
+    if(pageIndex !== 1){
+      pageIndex--
+    }
     wx.showToast({
       title: '加载数据失败',
      })
+     that.setData({
+      hidden: false
+    })
   })
 }

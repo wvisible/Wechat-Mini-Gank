@@ -1,4 +1,5 @@
 <template name="detail-temp">
+    <image class="load-failure-image" mode="aspectFill" src="{{imgsrc}}" hidden="{{hidden}}" bindtap="clickRetry"/>
     <view>
         <view>
             <image class="temp-top-image" mode="aspectFill" src="{{imagesrc}}"/>
